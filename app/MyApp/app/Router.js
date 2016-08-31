@@ -425,6 +425,35 @@ $(function() {
 
         },
                 badgesDetails: function(courseId){
+                    var courseProgress = new App.Collections.membercourseprogresses()
+                    courseProgress.memberId = $.cookie('Member._id');
+                    courseProgress.courseId = courseId;
+                    courseProgress.fetch({
+                        async:false,
+                    });
+                    var creditsArray = [];
+                    creditsArray =  courseProgress.models[0].get('stepsResult');
+                   // alert(creditsArray.length)
+                    var resLength = [];
+
+                    for (var i =0; i< courseProgress.models[0].get('stepsResult').length ; i++){
+
+                        if (courseProgress.models[0].get('stepsResult')[i].length  > 1){
+                            resLength.push(parseInt(courseProgress.models[0].get('stepsResult')[i][0]))
+                            resLength.push(parseInt(courseProgress.models[0].get('stepsResult')[i][1]))
+                            // alert(resLength)
+                        }
+                        else {
+                            resLength.push(parseInt(courseProgress.models[0].get('stepsResult')[i]))
+                            //  alert(resLength)
+                        }
+                    }
+                     // alert(resLength.length);
+                    var marks = 0; var totalMarks = 100*resLength.length ;
+                    for (var i =0; i< resLength.length ; i++){
+                        marks = marks+resLength[i]
+                             // console.log("reslenght : " + resLength[i] + " sum : " + sum)
+                    }
 
                     var courseSteps = new App.Collections.coursesteps()
                     courseSteps.courseId=courseId;
@@ -434,11 +463,23 @@ $(function() {
                     var badgesTableView = new App.Views.BadgesTable({
                         collection :courseSteps
                     });
+                    var loggedIn = new App.Models.Member({
+                        "_id": $.cookie('Member._id')
+                    })
+                    loggedIn.fetch({
+                        async: false
+                    })
+                    var name = loggedIn.get('firstName')+ " " +loggedIn.get('lastName')
                     badgesTableView.courseId=courseId;
+                    badgesTableView.memberId= $.cookie('Member._id');
                     badgesTableView.render();
+
                     App.$el.children('.body').html('<div id="badgesTable"></div>');
-                    $('#badgesTable').append('<h3>' + 'Member Badges' + '</h3>');
+                    $('#badgesTable').append('<h3>' + name + '\'s Badges' + '</h3>');
                     $('#badgesTable').append(badgesTableView.el);
+
+                    $('#badgesTable').append(' <hr   style= "border-width: 5px;">' );
+                    $('#badgesTable').append('<tr><td style="float: left; margin: 0 0 10px 10px;" >' + 'Total'  + '</td><td style="float: right; margin: 0 0 10px 185px;">' + marks +"%"   + '</td><td style="float: right; margin: 0 0 10px 1250px;" >' +marks + "/" +totalMarks+ '</td></tr>');
                 },
 
         creditsDetails:function(courseId, memberId) {

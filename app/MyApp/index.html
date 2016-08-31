@@ -924,13 +924,26 @@
             <%= stepType %>
         </td>
         <td>
-            <%= quizCredits %>
+            <%if(stepType == 'Quiz' && credits != '0'  ){%>
+            submitted
+            <%}else if(stepType == 'Quiz' && credits == '0'  ){%>
+            Quiz is not submitted
+            <%}else{%>
+            <%if(attachmentName!=null && attchmentURL != null){%>
+            <a download="<%=attachmentName%>" href="<%=attchmentURL%>"  target="_blank" ><button class="btn btn-primary"> DownloadPaper  </button></a>
+            <%}else{%>
+            Paper is not uploaded
+            <%}%>
+            <%}%>
         </td>
         <td>
-            <%= paperCredits %>
+            <input type="hidden" name="percentage"  id="<%=percentage%>">
+            <%= credits %>/100
+
         </td>
+
         <td>
-            <%= status %>
+            <%= credits %>%
         </td>
 
     </script>
