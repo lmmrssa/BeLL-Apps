@@ -431,28 +431,22 @@ $(function() {
                     courseProgress.fetch({
                         async:false,
                     });
-                    var creditsArray = [];
-                    creditsArray =  courseProgress.models[0].get('stepsResult');
-                   // alert(creditsArray.length)
                     var resLength = [];
-
+                    var stepLength = [];
                     for (var i =0; i< courseProgress.models[0].get('stepsResult').length ; i++){
-
-                        if (courseProgress.models[0].get('stepsResult')[i].length  > 1){
+                        stepLength = courseProgress.models[0].get('stepsResult')[i];
+                        if($.isArray(stepLength)){
                             resLength.push(parseInt(courseProgress.models[0].get('stepsResult')[i][0]))
                             resLength.push(parseInt(courseProgress.models[0].get('stepsResult')[i][1]))
-                            // alert(resLength)
                         }
                         else {
                             resLength.push(parseInt(courseProgress.models[0].get('stepsResult')[i]))
-                            //  alert(resLength)
                         }
                     }
-                     // alert(resLength.length);
                     var marks = 0; var totalMarks = 100*resLength.length ;
                     for (var i =0; i< resLength.length ; i++){
                         marks = marks+resLength[i]
-                             // console.log("reslenght : " + resLength[i] + " sum : " + sum)
+
                     }
 
                     var courseSteps = new App.Collections.coursesteps()
