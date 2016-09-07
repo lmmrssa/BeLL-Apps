@@ -35,7 +35,7 @@
              for(var i = 0 ; i < that.collection.length ; i++) {
                  var model = that.collection.models[i];
                  indexOfCurrentStep =courseProgress.models[0].get('stepsIds').indexOf(model.get('_id'));
-                 if(model.attributes.outComes.length > 1) { // if step type is "paper and quiz" then separate outcomes and result of paper and quiz in two separate rows
+                 if(model.attributes.outComes.length > 1 && $.isArray(courseProgress.models[0].get('stepsResult')[indexOfCurrentStep])) { // if step type is "paper and quiz" then separate outcomes and result of paper and quiz in two separate rows
                      var tempOutComes=model.attributes.outComes;
                      model.attributes.outComes = tempOutComes[0];
                      credits = courseProgress.models[0].get('stepsResult')[indexOfCurrentStep][0];
