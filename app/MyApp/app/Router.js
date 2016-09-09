@@ -473,7 +473,7 @@ $(function() {
                     $('#badgesTable').append(badgesTableView.el);
 
                     $('#badgesTable').append(' <hr   style= "border-width: 5px;">' );
-                    $('#badgesTable').append('<tr><td style="float: left; margin: 0 0 10px 10px;" >' + 'Total'  + '</td><td style="float: right; margin: 0 0 10px 185px;">' + marks +"%"   + '</td><td style="float: right; margin: 0 0 10px 1250px;" >' +marks + "/" +totalMarks+ '</td></tr>');
+                    $('#badgesTable').append('<tr><td style="float: left; margin: 0 0 10px 10px;" >' + 'Total'  + '</td><td style="float: right; margin: 0 0 10px 216px;">' + marks +"%"   + '</td><td style="float: right; margin: 0 0 10px 1187px;" >' +marks + "/" +totalMarks+ '</td></tr>');
                 },
 
         creditsDetails:function(courseId, memberId) {
@@ -552,7 +552,7 @@ $(function() {
 
         },
         submitCredits: function(courseId , memberId) {
-            var isValid = [];
+            var isValid = []; var responses = 0;
             var readOnly = [];
             $("input[name='paperCredits']").each(function () {
                 console.log ($(this).val().trim());
@@ -622,12 +622,18 @@ $(function() {
                                 else{
                                     memberProgress.attributes.stepsStatus[memberStepIndex] = '3';
                                 }
-                                memberProgress.attributes.stepsStatus[memberStepIndex] = '3';
+                                //
+                                // memberProgress.attributes.stepsStatus[memberStepIndex] = '3';
                             }
                             memberProgress.save(null, {
+                                async: false,
                                 success: function (response) {
+                                     if (response){
+                                         alert(response)
 
-                                }
+                                     }
+                                },
+                                async: false,
                             });
                         }
 
@@ -637,7 +643,6 @@ $(function() {
 
             });
                 alert('Paper credits have been submitted');
-
         } else {
                 alert('Please enter marks against each paper');
                return false;
