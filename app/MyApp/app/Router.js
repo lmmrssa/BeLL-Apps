@@ -552,7 +552,7 @@ $(function() {
 
         },
         submitCredits: function(courseId , memberId) {
-            var isValid = []; var responses = 0;
+            var isValid = [];
             var readOnly = [];
             $("input[name='paperCredits']").each(function () {
                 console.log ($(this).val().trim());
@@ -628,10 +628,6 @@ $(function() {
                             memberProgress.save(null, {
                                 async: false,
                                 success: function (response) {
-                                     if (response){
-                                         alert(response)
-
-                                     }
                                 },
                                 async: false,
                             });
