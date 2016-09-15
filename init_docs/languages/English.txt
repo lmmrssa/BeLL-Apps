@@ -822,5 +822,6 @@
   "Nation_Visible":"Nation is visible",
   "Nation_InVisible":"Nation is not visible",
   "delete_alert": "Are you sure you want to upload this resource?",
-  "Resource_Already_At_Nation": "Resource is already at Nation"
+  "Resource_Already_At_Nation": "Resource is already at Nation",
+  "Confirm_Course":"Are you sure you want to delete this Course?",
 }

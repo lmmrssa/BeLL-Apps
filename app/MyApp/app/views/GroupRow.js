@@ -10,6 +10,7 @@ $(function () {
                 var cId = this.model.get("_id")
                 var clevels = new App.Collections.CourseLevels()
                 var model
+                if (confirm(App.languageDict.attributes.Confirm_Course)) {
                 clevels.groupId = cId
                 clevels.fetch({
                     success: function () {
@@ -48,6 +49,7 @@ $(function () {
                 })
                 this.model.destroy()
                 this.remove()
+                }
             },
             "click .browse": function (e) {
                 e.preventDefault()
