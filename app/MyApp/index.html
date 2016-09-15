@@ -974,13 +974,13 @@
             <%}%>
             <%if(stepType== 'Paper'){%>
             <%if(paperSubmitted ==  "Submitted" && credits == '0' ){%>
-            <input type="text" placeholder="Enter paper marks" name="paperCredits"  id="<%=id%>/<%=percentage%>">
+            <input type="text" placeholder="Enter paper marks" name="paperCredits"  id="<%=id%>/<%=percentage%>" value="<%= credits %>">/100
               <%}else if(paperSubmitted ==  "Submitted" && credits != '0' ){%>
             <input type="text" placeholder="Enter paper marks" name="paperCredits"  id="<%=id%>/<%=percentage%>" value="<%= credits %>">/100
             <%}else if(paperSubmitted ==  "NotSubmitted" && credits == '0' ){%>
             <input type="text" placeholder="Enter paper marks" name="paperCredits"  id="<%=id%>/<%=percentage%>" value="<%= credits %>" readonly>/100
             <%}else{%>
-            <%= credits %>/100
+            <input type="text" placeholder="Enter paper marks" name="paperCredits"  id="<%=id%>/<%=percentage%>" value="<%= credits %>">/100
             <%}%>
             <%}%>
         </td>

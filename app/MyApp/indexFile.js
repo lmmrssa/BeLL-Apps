@@ -1284,11 +1284,11 @@ function FieSelected(stepId) {
                         memberProgress = memberProgress.first();
                         var memberStepIndex = memberProgress.get('stepsIds').indexOf(stepId);
                         if( memberProgress.attributes.stepsResult[memberStepIndex].length >1){
-                            memberProgress.attributes.stepsResult[memberStepIndex][0] = '2';
+                           // memberProgress.attributes.stepsResult[memberStepIndex][0] = '2';
                             memberProgress.attributes.stepsStatus[memberStepIndex][0] = '2';
                         }
                         else{
-                        memberProgress.attributes.stepsResult[memberStepIndex] = '2';
+                       // memberProgress.attributes.stepsResult[memberStepIndex] = '2';
                         memberProgress.attributes.stepsStatus[memberStepIndex] = '2';
                         }
                         memberProgress.save(null, {
