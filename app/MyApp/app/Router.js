@@ -325,6 +325,10 @@ $(function() {
             this.underConstruction()
         },
         Badges: function() {
+            var languageDictValue;
+            var lang = getLanguage($.cookie('Member._id'))
+            languageDictValue = getSpecificLanguage(lang);
+            App.languageDict = languageDictValue;
             //Check if the user who has logged in is a Leader or a Learner in any course.
             var stepsStatuses=[];
             var groups = new App.Collections.Groups()
@@ -390,12 +394,14 @@ $(function() {
                 },
                 async:false
             });
-
-
+            applyCorrectStylingSheet(languageDictValue.get('directionOfLang'));
         },
 
         Credits: function() {
             //Check if the user who has logged in is a Leader or a Learner in any course.
+            var languageDictValue;
+            var lang = getLanguage($.cookie('Member._id'))
+            languageDictValue = getSpecificLanguage(lang);
             var creditsView = new App.Views.CreditsLeaderView(
             );
             App.$el.children('.body').html('<div id="creditsMainTable"></div>');
@@ -422,9 +428,12 @@ $(function() {
                 }
             });
             $('#creditsMainTable').append(creditsView.el);
-
+            applyCorrectStylingSheet(languageDictValue.get('directionOfLang'));
         },
         badgesDetails: function(courseId){
+            var lang = getLanguage($.cookie('Member._id'))
+            languageDictValue = getSpecificLanguage(lang);
+            App.languageDict = languageDictValue;
             var courseProgress = new App.Collections.membercourseprogresses()
             courseProgress.memberId = $.cookie('Member._id');
             courseProgress.courseId = courseId;
@@ -474,9 +483,14 @@ $(function() {
 
             $('#badgesTable').append(' <hr   style= "border-width: 5px;">' );
             $('#badgesTable').append('<tr><td style="float: left; margin: 0 0 10px 10px;" >' + 'Total'  + '</td><td style="float: right; margin: 0 0 10px 216px;">' + marks +"%"   + '</td><td style="float: right; margin: 0 0 10px 1187px;" >' +marks + "/" +totalMarks+ '</td></tr>');
+            applyCorrectStylingSheet(languageDictValue.get('directionOfLang'));
         },
 
         creditsDetails:function(courseId, memberId) {
+            var languageDictValue;
+            var lang = getLanguage($.cookie('Member._id'))
+            languageDictValue = getSpecificLanguage(lang);
+            App.languageDict = languageDictValue;
             var that = this;
             var learnerCollection = this.getLearnersList(courseId);
             if(!memberId)
@@ -548,8 +562,7 @@ $(function() {
                 $('#creditsTable').append(creditsTableView.el);
                 $('#creditsTable').append('<input class="btn btn-success" style="display: flex;margin:0 auto ;font-size: 15px" type="button" value="Submit Credits" id="submitCredits" onclick="App.Router.submitCredits(\'' + courseId + '\',\'' + memberId + '\'  )"/>')
             }
-
-
+            applyCorrectStylingSheet(languageDictValue.get('directionOfLang'));
         },
         submitCredits: function(courseId , memberId) {
             var isValid = [];
