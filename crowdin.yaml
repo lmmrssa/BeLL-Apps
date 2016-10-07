@@ -1,4 +1,4 @@
 files:
   - 
     source: 'init_docs/languages/*.txt'
-    translation: 'init_docs/translated/%locale%/%original_file_name%'
+    translation: 'translated/%locale%/%original_file_name%'
