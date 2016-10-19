@@ -1,4 +1,4 @@
 files:
   - 
     source: /init_docs/languages/English.txt
-    translation: /init_docs/languages/%two_letters_code%/i18n.txt
+    translation: /init_docs/languages/%two_letters_code%/i10n.txt
