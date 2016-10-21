@@ -1,3 +1,6 @@
+project_identifier: bell-apps
+api_key: 57723e80ba9e960d418886f34ba36531
+
 files:
   - 
     source: /init_docs/languages/English.txt
