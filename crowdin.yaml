@@ -1,4 +1,4 @@
 files:
   - 
     source: /init_docs/languages/English.txt
-    translation: /init_docs/languages/%two_letters_code%.txt
+    translation: /init_docs/languages/%locale_with_underscore%.txt
