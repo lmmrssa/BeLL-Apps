@@ -1,7 +1,7 @@
 {
-   "nameOfLanguage": "English",
-   "directionOfLang":"Left",
-   "nameInNativeLang":"English",
+   "nameOfLanguage": "अंग्रेजी",
+   "directionOfLang":"बाँया",
+    "nameInNativeLang":"अंग्रेजी",
    "Dashboard": "My Home",
    "Library": "Library",
    "Courses": "Courses",
