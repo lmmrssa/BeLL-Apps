@@ -1,7 +1,4 @@
-project_identifier: bell-apps
-api_key: 57723e80ba9e960d418886f34ba36531
-
 files:
   - 
-    source: /init_docs/languages/English.txt
+    source: /init_docs/languages/Text.json
     translation: /init_docs/languages/%locale_with_underscore%.txt
