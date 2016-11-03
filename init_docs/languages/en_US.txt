@@ -1,7 +1,7 @@
 {
   "nameOfLanguage":"English",
   "directionOfLang":"Left",
-  "nameInNativeLang":"English",
+  "nameInNativeLang":"English (Us)",
   "Dashboard":"My Home",
   "Library":"Library",
   "Courses":"Courses",
@@ -268,8 +268,8 @@
   "Daily":"Daily",
   "Weekly":"Weekly",
   "Location":"Location",
-  "Foreground_Color":"Foreground Color",
-  "Background_Color":"Background Color",
+  "Foreground_Color":"Foreground Colour",
+  "Background_Color":"Background Colour",
   "Invite_Member":"Invite Member",
   "GradeLevelList":[
     "Pre-Kindergarten",
