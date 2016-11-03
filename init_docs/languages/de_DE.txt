@@ -1,7 +1,7 @@
 {
-  "nameOfLanguage":"अंग्रेजी",
-  "directionOfLang":"बाँया",
-  "nameInNativeLang":"अंग्रेजी",
+  "nameOfLanguage":"English",
+  "directionOfLang":"Left",
+  "nameInNativeLang":"English",
   "Dashboard":"My Home",
   "Library":"Library",
   "Courses":"Courses",
@@ -12,7 +12,7 @@
   "Logout":"Logout",
   "Badges":"Badges",
   "Calender":"Calendar",
-  "Email":"र्इमेल",
+  "Email":"Email",
   "Welcome_Video":"Welcome Video",
   "Nation":"Nation",
   "Community":"Community",
@@ -24,29 +24,29 @@
   "Visits":"Visits",
   "Days":[
     {
-      "Sunday":"अाइतबार",
-      "Monday":"साेमबार",
-      "Tuesday":"मंगलबार",
-      "Wednesday":"बुधबार",
-      "Thursday":"बिहीबार",
-      "Friday":"शुक्रबार",
-      "Saturday":"शनिबार"
+      "Sunday":"Sunday",
+      "Monday":"Monday",
+      "Tuesday":"Tuesday",
+      "Wednesday":"Wednesday",
+      "Thursday":"Thursday",
+      "Friday":"Friday",
+      "Saturday":"Saturday"
     }
   ],
   "Months":[
     {
-      "January":"जनवरी",
-      "February":"फेब्रुवरी",
-      "March":"मार्च",
-      "April":"अप्रिल",
-      "May":"मे",
-      "June":"जुन",
-      "July":"जूलार्इ",
-      "August":"अगष्ट",
-      "September":"सेप्टेम्बर",
-      "October":"अक्टाेवर",
-      "November":"नाेबेम्वर",
-      "December":"डिसेम्बर"
+      "January":"January",
+      "February":"February",
+      "March":"March",
+      "April":"April",
+      "May":"May",
+      "June":"June",
+      "July":"July",
+      "August":"August",
+      "September":"September",
+      "October":"October",
+      "November":"November",
+      "December":"December"
     }
   ],
   "News_Feed":"News Feed",
