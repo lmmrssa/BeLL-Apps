@@ -1,4 +1,4 @@
 files:
   - 
     source: /init_docs/Text.json
-    translation: /init_docs/languages/%locale_with_underscore%.txt
+    translation: /init_docs/languages/%locale_with_underscore%.json
