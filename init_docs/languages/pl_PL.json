@@ -36,15 +36,15 @@
    "Months": [
       {
          "January": "Styczeń",
-         "February": "February",
-         "March": "March",
-         "April": "April",
-         "May": "May",
-         "June": "June",
-         "July": "July",
-         "August": "August",
-         "September": "September",
-         "October": "October",
+         "February": "Luty",
+         "March": "Marzec",
+         "April": "Kwiecień",
+         "May": "Maj",
+         "June": "Czerwiec",
+         "July": "Lipiec",
+         "August": "Sierpień",
+         "September": "Wrzesień",
+         "October": "Październik",
          "November": "November",
          "December": "December"
       }
