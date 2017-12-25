@@ -162,7 +162,7 @@
    "Collection_Name": "Collection Name",
    "Nested_Under": "Nested Under",
    "Added_Date": "Toegevoegd op",
-   "Description": " Description",
+   "Description": " Omschrijving",
    "LevelArray": [
       "Early Education",
       "Lower Primary",
@@ -699,9 +699,9 @@
       "Single Textbox",
       "Comment/Essay Box"
    ],
-   "Question_Text": " Question Text",
+   "Question_Text": " Vraagtekst",
    "answer_Choices_Stat": "Antwoordkeuzen (elke keuze op een aparte regel)",
-   "require_answer": " Require Answer to Question.",
+   "require_answer": " Vraag een antwoord op de vraag.",
    "column_choices": "Column Choices",
    "select_ratings": "Select the number of ratings:",
    "ratingsArray": [
